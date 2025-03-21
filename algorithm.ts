@@ -1,5 +1,5 @@
 /*
-Algorhytm for calculating cart total price basing on list for rules
+Iterator-based algorhytm for calculating cart total price basing on list for rules
 The rules are assigned and prioritized, then executed in asyncronous
 sequence passing their results forward  
 */
