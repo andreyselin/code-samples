@@ -2,6 +2,7 @@
  * Nest.JS service with top-level business logic for 
  * buying subscription as non-authorized user (and as authorized later)
  * Main method is createOrder
+ * The implementation is minimal, some parts simplified for early production usage
  */
 
 @Injectable()
@@ -65,8 +66,6 @@ export class CreateOrderService {
     /* * * * * * * * * * * * * * * */
 
     this.validateUserDetails(userDetails);
-
-    // Recalculate cart to check it
     const checkedCart = await this.recalculateCart(cartToRecalculate);
 
     /* * * * * * * * * * * * */
