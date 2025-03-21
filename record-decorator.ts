@@ -1,7 +1,8 @@
 /*
 Extension for nestjs swagger package
-Nest JS swagger decorator for rendering enpdoint body as Record<SomeKeyType, SomeValueType>
-and generating typed api client with this type as request/response dto
+Decorator for rendering dto type as Record<SomeKeyType, SomeValueType>
+and generating typed api client with this type as request/response dto.
+Made as addition to Omit, Pick types
 */
 
 import type { Type } from '@nestjs/common';
