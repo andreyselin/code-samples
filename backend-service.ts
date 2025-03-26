@@ -57,7 +57,7 @@ export class CreateOrderService {
     promoCode,
   }: CreateOrderUnifiedParams) {
 
-    this.logger.info({ key: 'CreateOrderService.createOrder:start', details: { userId, cart, userDetails, promoCode } });
+    this.logger.info({ key: 'CreateOrderService.createOrder:start', details: { userId, cartToRecalculate, userDetails, promoCode } });
 
     /* * * * * * * * * * * * * * * */
     /*                             */
@@ -107,7 +107,7 @@ export class CreateOrderService {
     const initiatePurchaseResult = await this.purchasesCommercialService
       .initPurchase(initPurchaseParams);
 
-    this.logger.info({ key: 'CreateOrderService.createOrder:initPurchaseParams', details: { userId, initiatePurchaseResult } });
+    this.logger.info({ key: 'CreateOrderService.createOrder:initPurchaseResult', details: { userId, initiatePurchaseResult } });
 
     return initiatePurchaseResult;
   }
